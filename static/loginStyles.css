@@ -1,0 +1,319 @@
+/************************ Dialog Box ***********************/
+.dialog-box {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 3s ease-in-out;
+}
+
+.dialog-boxx {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 3s ease-in-out;
+}
+.dialog-boxx p{
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 7px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.dialog-boxx a{
+  margin-top: 7px;
+  padding: 5px;
+  background: #00ADB5;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.dialog-box button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 19px;
+  background-color: #00ADB5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dialog-box button:hover {
+background-color: #006699;
+}
+
+.dialog-box h3{
+  font-size: 21px;
+  margin: 15px;
+  color: #222831;
+  text-align: center;
+  margin-top: 0;
+}
+.dialog-box p{
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 5px 5px 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+/****************** END DB ****************/
+
+.title {
+    font-family: arial;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #00adb5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+  }
+  body a{
+    display: inline-block;
+    text-align: center;
+    border-radius: 15px;
+    color: #00ADB5;
+    text-decoration: none;
+  }
+  .clearfix .createaccount a {
+    display: block;
+    margin: 0 auto 0;
+    padding: 14px 20px;
+    font-size: 18px;
+    color: #fff !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+  }
+  
+  .clearfix a.createaccount:hover {
+    background-color: #006699;
+  }
+
+  .error {
+    font-family: arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #bd0909;
+    margin-top: 0%;
+    margin-bottom: 60px;
+    margin-left: 1.5%;
+    
+  }
+  
+  body {
+    margin: 0px;
+    background: #eeeeee;
+  }
+  
+  label {
+    color: #222831;
+  }
+  .about__description {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .left_wrap {
+    background-color: #eeeeee;
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+  .Cwrap{
+    left: 0;
+    width: 100%;
+  }
+  .right_wrap {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    object-fit: fill;
+    border-left: 3px solid #1d1d1d;
+    background-repeat: no-repeat;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Full-width input fields */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 70%;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+body a {
+  font-weight: bold;
+  color: #00ADB5;
+  margin-left: 5px;
+}
+label {
+  font-size: 21px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #00adb5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 18px;
+    border-radius: 15px;
+  }
+  
+  button:hover {
+    opacity: 1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .crateaccount {
+    padding: 14px 20px;
+    background-color: #222831;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .crateaccount,
+  .login {
+    width: 50%;
+  }
+  /* Add padding to container elements */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    margin: 20px;
+  }
+  
+  /* Clear floats */
+  .clearfix {
+    content: "";
+    clear: both;
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .crateaccount,
+    .login {
+      width: 100%;
+    }
+  }
+  
+  .series_movies {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    padding: 30px;
+  }
+  
+  .photo {
+    max-width: 31.333%;
+    padding: 0 10px;
+    height: 240px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media(max-width:1000px){
+    .right_wrap{
+      display: none;
+    }
+    .about__description{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .left_wrap{
+      width: 100%;
+      height: 100%;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    .container input[type="text"], 
+    input[type="password"] {
+      width: 50%;
+      border: 1px solid #092754;
+      border-radius: 5px;
+    }
+    body label {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #00adb5;
+      color: white;
+      padding: 14px 20px;
+      font-size: 19px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      border-radius: 15px;
+    }
+    .clearfix {
+      content: "";
+      clear: both;
+      flex-direction: column-reverse;
+      width: 100%;
+      align-items: center;
+      display: flex;
+    }
+  }

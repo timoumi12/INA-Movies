@@ -1,0 +1,68 @@
+mandatory:
+pip install flask
+pip install flask_session
+pip install helpers
+link to install sqlite: <https://sqlite.org/2023/sqlite-tools-win32-x86-3410200.zip>
+ytb link ywari steps to install it (sqlite): <https://youtu.be/BomCx0jbwPY>
+bch tzid sqlite lel path taa vscode w tajm texecuty 
+sql cmds ml terminal teou: <$env:PATH += ";C:\sqlite3">
+
+
+app = Flask(__name__)
+ Creates a new Flask web application instance and
+  assigns it to the app variable. It allows Flask to
+  find the location of the web application/'s resources
+  (such as templates and static files) relative to the current module.
+
+
+
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+enable session handling in a Flask application and configure the 
+session settings to meet the needs of the application.
+n.b: Session handling is a way to keep track of user data as they
+interact with a web application. When session handling is enabled,
+the web server can associate a unique session ID with each user
+that visits the site. This ID can be used to store user data, such as
+login credentials or preferences, on the server-side so that it can
+be retrieved later during the same session.
+(nesthakoulou baad mouch fl page hedhy)
+
+
+
+@app.after_request
+def after_request(response):
+    "Ensure responses aren't cached"
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Expires"] = 0
+    response.headers["Pragma"] = "no-cache"
+    return response
+
+Set HTTP response headers to instruct the browser not to cache the response.
+This is useful when you want to ensure that the browser
+fetches the latest version of a resource from the server,
+rather than serving it from the cache.
+This can be particularly important when serving dynamic content,
+such as content that varies based on the user/'s session or the current time.
+
+"app.jinja_env.auto_reload = True"
+Setting app.jinja_env.auto_reload = True configures the Jinja environment to automatically
+reload templates if they have been modified on disk.
+This is done by checking the modification time of the template file
+on disk and comparing it to the last time the template was compiled.
+If the modification time is more recent, Jinja will recompile the templatebefore rendering it.
+
+
+g is an object for storing data during the application context of a running Flask web app.
+-> The application context keeps track of the application-level 
+data during a request, CLI command, or other activity.
+Rather than passing the application around to each function,
+the "current_app" and g proxies are accessed instead.
+
+flask.current_app
+A "proxy" to the application handling the current request.
+This is useful to access the application without needing
+to import it, or if it can’t be imported, such as when using
+"the application factory pattern" or in "blueprints" and extensions.

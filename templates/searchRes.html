@@ -1,0 +1,51 @@
+{% extends "trending.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="trnewsection" style="margin: 20px 0;">
+            <h1>Search Results</h1>
+        </div>
+        <div class="main">
+            {% if not data %}
+                <div class="apology">
+                    <p>Looks like we don't have this movie on our Website.</p>
+                    <p>Visit us soon for more updates!</p>
+                    <img src="https://i.pinimg.com/236x/a2/48/b8/a248b8601e5c5aabb0f35cd1a014cfd9.jpg">
+                </div>
+            {% else %}
+                {% for row in data %}
+                    <div class="section">
+                        <ul>
+                            <li><img src="{{ row['poster'] }}"></li>
+                            <li>
+                                <div class="title">
+                                    <p id="{{ row['id'] }}"> Title: {{ row["title"] }}</p>
+                                </div>
+                                <div class="desc">
+                                    <p> {{ row["desc"] }} </p>
+                                </div>
+                                <div class="year">
+                                    <p>Year: {{ row["year"] }} </p>
+                                </div>
+                                <div class="year">
+                                    <p>Genres: {{ row["genre"] }} </p>
+                                </div>
+                                <div class="details">
+                                    <p>Description: {{ row["category"] }} | {{ row["duration"] }} | Rating: {{ row["rating"] }} </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                {% endfor %}
+            {% endif %}
+            <div class="tbtn">
+                <a style="text-decoration: none; color: #fff;"  href="/trending" class="backbtn">Back To Trendings</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    TOP Movies
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="note">
+            <h2>INA Movies’ Top 100 of All Time</h2>
+            <p>These rankings are based on multiple sources such as IMDB, Rotten Tomatoes as well as
+                our own statistics (most viewed, most repeated, User ratings..)
+            </p>
+            <div style="text-align: center; width: 70%; margin: 3% auto;">
+                <hr>
+            </div>
+        </div>
+        <div class="main">
+            {% for row in data %}
+                <div class="section">
+                    <ul>
+                        <li><img src="{{ row['poster'] }}"></li>
+                        <li>
+                            <div class="title">
+                                <p id="{{ row['id'] }}">#{{ row["id"] }} Title: {{ row["title"] }}</p>
+                            </div>
+                            <div class="desc">
+                                <p> {{ row["desc"] }} </p>
+                            </div>
+                            <div class="year">
+                                <p>Year: {{ row["year"] }} </p>
+                            </div>
+                            <div class="details">
+                                <p>Description: {{ row["category"] }} | {{ row["duration"] }} | Rating: {{ row["rating"] }} </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

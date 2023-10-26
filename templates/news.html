@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="/static/videoPlayer.ico" rel="shortcut icon" type="image/x-icon">
+    <title> News </title>
+</head>
+    <body class="container">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <label class="logo-style">INAMOVIES</label>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <form class="search-bar" action="/topmovies" method="POST" name="searchB">
+                            <input type="text" placeholder="Type a Movie Name" name="search" autocomplete="off">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                    <li><a href="/duplicate">Home</a></li>
+                    <li><a href="/trending">Movies</a></li>
+                    <li><a href="/logout" class="active">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="newsnote">
+                <h1>What's New, What's Leaving</h1>
+                <p>See our Top News what moves, documentaries, and more are coming - and leaving.
+                </p>
+            </div>
+            <div class="newsopp">
+                <div class="the_img">
+                    <img class="newsimg" src="https://movies.universalpictures.com/media/03-opp-dm-mobile-banner-1080x745-pl-f01-062122-62defaa505f81-1.jpg">
+                </div>
+                <div class="imgdsc">
+                    <h3>Available Now</h3>
+                    <h2>OPPENHEIMER</h2>
+                    <p>The story of American scientist J.Robert Oppenheimer and his role in the development of the atomic bomb.</p>
+                    <p>Written and Directed by Christopher Nolan</p>
+                    <p>Starring Cilian Murphy, Emily Blunt, Matt Damon</p>
+                    <p>Genres: Biography, Drama, History</p>
+                    <a href="https://www.imdb.com/title/tt15398776/">Find Out More.</a>
+                </div>
+            </div>
+            <div>
+            <div class="newsnotes">
+                <h1>Mark Your Calendar</h1>
+                <p>Coming Soon :</p>
+                <div style="text-align: center; width: 70%; margin: 2% auto;">
+                    <hr>
+            </div>
+            <div id="newspsc">
+                
+                    <div class="newsection" >
+                        
+                        <div class="subsec">
+                            <div class="imgcontainer">
+                                <img src="https://www.themoviedb.org/t/p/original/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg">
+                                <div class="descontainer">
+                                    <div>
+                                        <h3 class="hcolor">John Wick Chapter4</h3>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Year: 2022 | Rating: 7.9</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Duration: 130mn</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Class: R</p>
+                                    </div>
+                                    <div class="wlbtn">
+                                        <p class="date">Release Date: 13 August 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subsec">
+                            <div class="imgcontainer">
+                                <img src="https://pbs.twimg.com/media/FtHBPkiaMAEiz8g.jpg">
+                                <div id="descont">
+                                    <h3 class="hcolor">Indiana </h3>
+                                    <h3 class="hcolor">Jones</h3>
+                                    <div class="newsdet">
+                                        <p>Year: 2022 | Rating: 7.9</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Duration: 130mn</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Class: R</p>
+                                    </div>
+                                    <div class="wlbtn">
+                                        <p class="date">Release Date: 23 September 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subsec">
+                            <div class="imgcontainer">
+                                <img src="https://m.media-amazon.com/images/M/MV5BODUyODM1OGEtNTY3ZC00OTFjLTkyNDgtODU4MTk5NzkzYmQ5XkEyXkFqcGdeQXVyNjczMjc4NTA@._V1_.jpg">
+                                <div class="descontainer">
+                                    <h3 class="hcolor">Joker: Folie à Deux</h3>
+                                    <div class="newsdet">
+                                        <p>Year: 2022 | Rating: 7.9</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Duration: 130mn</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Class: R</p>
+                                    </div>
+                                    <div class="wlbtn">
+                                        <p class="date">Release Date: 4 July 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; width: 70%; margin: 2% auto;">
+                <hr>
+            </div>
+            <div class="newsnotes">
+                <h1 style="margin-top: 15px;margin-bottom: 35px;">Top News ></h1>
+            </div>
+            <div class="purenews">
+                <div class="newscard">
+                    <div class="the_img_news">
+                        <img class="newsimg" src="https://m.media-amazon.com/images/I/8102IRfOCBL._AC_UF894,1000_QL80_.jpg">
+                    </div>
+                    <div class="descnewscard">
+                        <h2>Harry Potter</h2>
+                        <p>'Harry Potter' Series Adaptation Officially Ordered at HBO Max And will Feature Entirely New Cast.</p>
+                        <p>Mai 6 | Variety | TV News</p>
+                        <a href="https://variety.com/2023/tv/news/harry-potter-tv-series-hbo-max-1235578295/">Find Out More.</a>
+                    </div>
+                </div>
+                <div class="newscard">
+                    <div class="the_img_news">
+                        <img class="newsimg" src="https://m.media-amazon.com/images/M/MV5BMTVhN2I0MTYtYzJjZS00MzRjLTliYmEtNTExNmFjZjA5YTU0XkEyXkFqcGdeQXVyMzM1OTgxMDc@._V1_.jpg">
+                    </div>
+                    <div class="descnewscard">
+                        <h2>Die Hart</h2>
+                        <p>Kevin Hart Comedy Series 'Die Hart' Renewed At Roku Channel After Record Premiere Weekend For Season 2.</p>
+                        <p> April 30 | +TV</p>
+                        <a href="https://deadline.com/2023/04/kevin-hart-comedy-series-die-hart-renewed-season-3-roku-channel-season-2-ratings-1235323904/">Find Out More.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="newsnotes">
+                <h1 style="margin-top: 15px;margin-bottom: 10px;">The 95TH Academy Awards | 2023</h1>
+                <p style="margin-top: 15px;margin-bottom: 35px;">Honoring movies released in 2022.</p>
+            </div>
+            <div class="newsopp" style="border: 3px solid #EEE;margin: 0 20px;">
+                <div class="the_img">
+                    <img class="newsimg" src="https://soundtrackfest.com/wp-content/uploads/2023/01/Oscars95-Nominees-Main.jpg" style="margin-left: 20px;">
+                </div>
+                <div class="imgdsc">
+                    <p style="margin-left: 20px;">Keeping up with the latest developments in the film industry, you might want to check out the 2023 Oscar Academy Awards, highlighting the most outstanding performances, directing, and other categories in the movie world.</p>
+                    <a href="https://www.oscars.org/oscars/ceremonies/2023" style="margin-left: 20px;">Find Out More.</a>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="fcontainer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Help Center</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

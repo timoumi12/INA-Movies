@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="/static/videoPlayer.ico" rel="shortcut icon" type="image/x-icon">
+
+    <title> {% block title %}{% endblock %} </title>
+</head>
+<body class="container">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <label class="logo-style">INAMOVIES</label>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <form class="search-bar" action="/topmovies" method="POST" name="searchB">
+                            <input type="text" placeholder="Type a Movie Name" name="search" autocomplete="off">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                    <li><a href="/duplicate">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/logout" class="active">Log Out</a></li>
+                </ul>
+        </nav>
+
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <div class="fcontainer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/aboutus">About Us</a></li>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Help Center</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

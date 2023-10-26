@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <link rel="stylesheet" href="/static/trial.css">
+    <script src="/static/trialModal.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="/static/videoPlayer.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="/static/trending.js"></script>
+    <title> {% block title %}{% endblock %} </title>
+</head>
+    <body class="container">
+
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <label class="logo-style">INAMOVIES</label>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <form class="search-bar" action="/topmovies" method="POST" name="searchB">
+                            <input type="text" placeholder="Type a Movie Name" name="search" autocomplete="off">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                    <li><a href="/duplicate">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/logout" class="active">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div id="my-dialog" class="dialog-box">
+            <h3>Nope, Not That Fast!</h3>
+            <p>Please Specify a Criteria.</p>
+            <button id="close-dialog">Close</button>
+        </div>
+        
+        <div class="newsnote">
+            <h2>Find Your Flick</h2>
+            <p>Spot your perfect movie match with our interactive Movie Explorer, with our filtering options, you can easily narrow down your search by selecting your favorite genres, actors, directors, and more, ensuring that you always find the perfect movie to suit your mood.
+            </p>
+        </div>
+        <div style="text-align: center; width: 70%; margin: 2% auto;">
+            <hr>
+        </div>
+        
+        <form class="selection" action="/searchres" method="POST" name="sfilter">
+            <ul>
+                <li>
+                    <select name="genre" id="genre">
+                        <option value="">select genre</option>
+                        <option value="romance">Romance</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="horror">Horror</option>
+                        <option value="action">Action</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="family">Family</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="scifi">Sci-Fi</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="war">War</option>
+                        <option value="biography">Biography</option>
+                        <option value="animation">Animation</option>
+                        <option value="history">History</option>
+                    </select>
+                </li>
+                
+                <li>
+                    <select name="language" id="language">
+                        <option value="">select language</option>
+                        <option value="English">English</option>
+                        <option value="English">Arabic</option>
+                        <option value="English">Spanish</option>
+                        <option value="English">Italian</option>
+                        <option value="English">French</option>
+                        <option value="English">Japanese</option>
+                        <option value="English">German</option>
+                        <option value="English">Russian</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="year" id="year">
+                        <option value="">select year</option>
+                        {% for row in years %}
+                            <option value="{{ row['year'] }}">{{ row['year'] }}</option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li>
+                    <select name="class" id="classification">
+                        <option value="" >select rating</option>
+                        <option value="PG"> PG - Parental Guidance suggested</option>
+                        <option value="PG-13">PG-13 - Parental Guidance 13+</option>
+                        <option value="TV-PG">TV-PG - TV Parental Guidance</option>
+                        <option value="G">G - General audiences</option>
+                        <option value="Passed">Passed - Clean family-friendly</option>
+                        <option value="Approved">Approved - Classic film rating</option>
+                        <option value="R">R - Restricted</option>
+                        <option value="Not Rated">Not Rated - No rating given</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="filter-group" style="width: 55%;">
+                <button type="submit" id="filter">filter</button>
+            </div>
+        </form>
+        
+        <div style="text-align: center; width: 70%; margin: 1% auto;">
+            <hr>
+        </div>
+            
+        {% block main %}{% endblock %}
+
+        <footer class="footer">
+            <div class="fcontainer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/aboutus">About Us</a></li>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Help Center</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

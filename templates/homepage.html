@@ -1,0 +1,96 @@
+{% extends "2ndlayout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="photo-container">
+            <div class="Mainphoto">
+                <div class="btn-grp">
+                    <button id="btn1" onclick="openModal('modal-hotd')">Watch Trailer</button>
+                    <button><a id="btn2" href="https://www.imdb.com/title/tt11198330/">Find Out More</a></button>
+                </div>
+            </div>
+            <div class="sndphoto">
+                <div class="btn-grp">
+                    <button id="btn1" onclick="openModal('modal-hotd')">Watch Trailer</button>
+                    <button><a id="btn2" href="https://www.imdb.com/title/tt11198330/">Find Out More</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-hotd" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-hotd')">&times;</span>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DotnJ7tTA34" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="descrption1">
+            <h2 style="margin-bottom: 6px;">All The TV You Love</h2>
+            <h4 style="margin-bottom: 6px;">
+            Live TV Makes It Better, Save your favorites easily and always have
+            something to watch.
+            </h4>
+            <h4>With Unlimited DVR, store Live TV recordings</h4>
+        </div>
+
+        <div class="series_movies">
+            <div class="movies">
+                <img src="https://meteamedia.org/wp-content/uploads/2020/01/Little-Women.png" class="photo12">
+                <a href="/trending" id="moviebtn">Movies</a>
+            </div>
+        </div>
+
+        <div class="_topcontainer">
+            <div class="_newsnotes">
+                <h1 style="margin-top: 15px;margin-bottom: 10px;">All-Time Favorites</h1>
+                <p style="margin-top: 5px;margin-bottom: 20px;">Check out our top picks and experience cinema at its finest!</p>
+            </div>
+            <div class="_newsopp">
+                <div class="_the_img">
+                    <img class="_newsimg" src="/static/Untitled design.jpg" style="margin-left: 20px;">
+                </div>
+                <div class="_imgdsc">
+                    <p style="margin-left: 20px;">We present to you our collection of All Time Favorite films that have captured the hearts and minds of audiences across generations. The selection of the top 100 movies is based on a variety of factors, such as critical acclaim, box office success, and cultural impact. These movies have transcended time and continue to be loved by audiences worldwide.From the epic scale of "Gone with the Wind" to the intimate drama of "The Godfather," these movies have become cultural touchstones and continue to inspire future generations of filmmakers.</p>
+                    <a href="/topmovies" style="margin-left: 20px;">Find Out More.</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="descrption2">
+            <h2 style="margin-bottom: 6px;">Select Your Plan</h2>
+            <h4 style="margin-bottom: 6px;">
+            Live TV Makes It Better, Save your favorites easily and always have
+            something to watch.
+            </h4>
+            <h4>With Unlimited DVR, store Live TV recordings</h4>
+        </div>
+
+        
+
+        <div class="select_plan" style="padding-left: 40px;">
+            
+            <div class="imgplans">
+                <div  class="mainimg1">
+                    <img src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2019/09/IMG_2911.jpeg">
+                </div>
+                <div class="mainimg2">
+                    <img src="https://i.redd.it/pemewgjt2bf01.jpg">
+                </div>
+                <div class="mainimg3">
+                    <img src="https://i.pinimg.com/originals/6c/66/d3/6c66d30f3b0aaaaa4cab64c98c9022b5.png">
+                </div>
+            </div>
+            
+            <div class="plans">
+                <h1 style="text-align: center;">Join our community and start enjoying the benefits!</h1>
+                <h1><a href="/signup" style="color: #00ADB5; margin-top: 10px;">Sign Up Now.</a></h1>
+            </div>
+           
+        </div>
+
+    </main>
+{% endblock %}

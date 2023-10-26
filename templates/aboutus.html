@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link href="/static/videoPlayer.ico" rel="shortcut icon" type="image/x-icon">
+
+        <title> {% block title %}{% endblock %} </title>
+    </head>
+    <body class="container">
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <label class="logo-style">INAMOVIES</label>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <form class="search-bar" action="/topmovies" method="POST" name="searchB">
+                            <input type="text" placeholder="Type a Movie Name" name="search" autocomplete="off">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                    <li><a href="/duplicate">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="abtheader">
+                <h1>About Us</h1>
+            </div>
+            <div style="text-align: center; width: 40%; margin: 10px auto; margin-bottom: 15px;">
+                <hr>
+            </div>
+            <div class="newsnotes">
+                <h1 style="font-size: 25px;color: #00ADB5;">About Our Goal</h1>
+                <p style="font-size: 19px;">Welcome to INA movies, the go-to source for movie ratings and reviews! Our mission is to help movie lovers find the best films out there and share their opinions with others. INA movies , we believe that movies are more than just entertainment , they're an art form that has the power to inspire, challenge, and move us. That's why we're passionate about providing a platform where people can discover and discuss the movies they love.</p>
+            </div>
+            <div class="team">
+                <p>Meet Our Team</p>
+                <div class="names">
+                    <p>Asma Raies</p>
+                    <p>Iheb Timoumi</p>
+                    <p>Nour Brahim</p>
+                </div>
+            </div>
+            <div class="newsnotes">
+                <h1 style="font-size: 25px;color: #00ADB5;">About Services & Features</h1>
+                <p style="font-size: 19px;">At INA movies, we're proud to offer a comprehensive database of movie ratings and reviews, as well as a range of features that make it easy to find the movies you're looking for. From our advanced search functionality to our personalized recommendations, we're committed to making the movie-watching experience as enjoyable as possible.</p>
+                <div class="ftrs">
+                    <ul>
+                        <li><p>- INA movies offers a comprehensive database of movie ratings and reviews, providing users with valuable insights on movies they are interested in.</p></li>
+                        <li><p>- INA movies has advanced search functionality that enables users to search for movies based on various criteria, such as genre, actor, director, and rating.</p></li>
+                        <li><p>- INA movies provides personalized recommendations based on users' viewing history and ratings, making it easier for users to find new movies that align with their interests.</p></li>
+                        <li><p>- INA movies is committed to providing the best possible movie-watching experience, with features designed to make movie discovery and selection as easy and enjoyable as possible.</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="newsnotes">
+                <h1 style="font-size: 25px;color: #00ADB5;">A Sample of Our Users' Feedback</h1>
+            </div>
+            <div class="reviews">
+                <div class="recs">
+                    <p>"I love INA movies ! It's the first place I go when I want to find a new movie to watch. The ratings and reviews are always spot-on, and I love how easy it is to use."</p>
+                    <p style="color: #00ADB5;">- Sarah Johnson, movie lover.</p>
+                
+                    <p style="margin-top: 20px;">"INA movies is a great resource for anyone who loves movies. I love being able to read reviews from other movie buffs, and the personalized recommendations are always on point."</p>
+                    <p style="color: #00ADB5;">- John Smith, film enthusiast.</p>
+                </div>
+            </div>
+        </main>
+
+
+        <footer class="footer">
+            <div class="fcontainer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/aboutus">About Us</a></li>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Help Center</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/static/loginStyles.css" />
+    <script src="/static/signup.js"></script>
+    <link href="/static/videoPlayer.ico" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="my-dialog" class="dialog-box">
+      <h3>Nope, Not That Fast!</h3>
+      <p>Verify Your Input</p>
+      <button id="close-dialog">Close</button>
+    </div>
+    {% if check == 0 %}
+      <div class="dialog-boxx">
+        <h3>Something Went Wrong</h3>
+        <p>{{ msg }}</p>
+        <a href="/signup" class="closeA">Close</a>
+      </div>
+    {% endif %}
+    <div class="about__description">
+      <div class="left_wrap">
+        <form action="/signup" method="POST">
+          <div class="container">
+            <h1><a href="/" class="title">INA MOVIES</a></h1>
+            <hr />
+
+            
+            <label for="user"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Your Username"
+              name="username"
+              id="username"
+            />
+            <p id="msg2" class="error"></p>
+
+            <label for="email"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="User@gmail.com"
+              name="email"
+              id="address"
+            />
+            <p id="msg1" class="error"></p>
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Your Password"
+              name="pwd"
+              id="pwd"
+            />
+            <p id="msg2" class="error"></p>
+
+            
+            <label for="psw"><b>Re-Enter Password</b></label>
+            <input
+              type="password"
+              placeholder="Re-Enter Your Password"
+              name="pwd2"
+              id="pwd2"
+            />
+            <p id="msg2" class="error"></p>
+
+            <label>
+              <input
+                type="checkbox"
+                checked="checked"
+                name="remember"
+                style="margin-bottom: 15px"
+              />
+              Remember me
+            </label>
+
+            
+
+            <div class="clearfix">
+              <p>You have an account?<a href="/login"> Log In</a></p>
+              <button id="checksignup" class="login">Sign Up</button>
+            </div>
+              
+          </div>
+        </form>
+      </div>
+      <div class="Cwrap">
+        <img src="https://images.gawker.com/18k2dr4o924ffjpg/c_scale,fl_progressive,q_80,w_800.jpg" class="right_wrap">
+      </div>
+    </div>
+  </body>
+</html>

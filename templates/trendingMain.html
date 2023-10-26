@@ -1,0 +1,83 @@
+{% extends "trending.html" %}
+{% block title %}
+    Trending
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="trnewsection">
+            <h2>Trending Now</h2>
+            <p>Discover the most sought-after and popular films in each of our handpicked genres by browsing our collection of currently trending titles, sure to provide you with a captivating movie viewing experience.</p>
+        </div>
+        
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/1dYv5u6v55Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="temp">
+            {% for row_grp in rows %}
+                <div class="newsection">
+                    {% for row in row_grp%}
+                        {% if loop.index0 % 3 == 0 %}
+                            <div>
+                                <p class="newsp">{{ row_grp[0].category }}</p>
+                            </div>
+                        {% endif %}
+                        <div class="subsec">
+                            <div class="imgcontainer">
+                                <img src="{{ row.poster }}">
+                                <div class="descontainer">
+                                    <div>
+                                        <h3>{{ row.title }}</h3>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Year: {{ row.year }} | Rating: {{row.rating}} </p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Duration: {{ row.duration }} mn</p>
+                                    </div>
+                                    <div class="newsdet">
+                                        <p>Class: {{ row.class }} </p>
+                                    </div>
+                                    <div class="wlbtn">
+                                        <button onclick="openModal('modal-{{ row.trailer }}')" class="watchtrbtn">Watch Trailer</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        
+            {% for row_grp in rows %}
+                {% for row in row_grp%}
+                    <div id="modal-{{ row.trailer }}" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal-{{ row.trailer }}')">&times;</span>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ row.trailer }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="topcontainer">
+            <div class="newsnotes">
+                <h1 style="margin-top: 15px;margin-bottom: 10px;">All-Time Favorites</h1>
+                <p style="margin-top: 5px;margin-bottom: 20px;">Check out our top picks and experience cinema at its finest!</p>
+            </div>
+            <div class="newsopp">
+                <div class="the_img">
+                    <img class="newsimg" src="/static/Untitled design.jpg" style="margin-left: 20px;">
+                </div>
+                <div class="imgdsc">
+                    <p style="margin-left: 20px;">We present to you our collection of All Time Favorite films that have captured the hearts and minds of audiences across generations. The selection of the top 100 movies is based on a variety of factors, such as critical acclaim, box office success, and cultural impact. These movies have transcended time and continue to be loved by audiences worldwide.From the epic scale of "Gone with the Wind" to the intimate drama of "The Godfather," these movies have become cultural touchstones and continue to inspire future generations of filmmakers.</p>
+                    <a href="/topmovies" style="margin-left: 20px;">Find Out More.</a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
